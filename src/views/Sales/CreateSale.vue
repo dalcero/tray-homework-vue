@@ -44,11 +44,9 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Valor da Venda"
+                                    <CurrencyInput
                                         v-model="sale.total"
+                                        :options="{ currency : 'BRL', autoDecimalDigits : true}"
                                     />
                                 </div>
 
@@ -81,6 +79,8 @@ import { onMounted, ref, reactive } from "vue";
 import SaleService from "@/services/sales.service";
 import SellerService from "@/services/sellers.service";
 import router from "@/router";
+
+import CurrencyInput from "./CurrencyInput.vue";
 
 export default {
     name: "CreateSale",
@@ -122,6 +122,9 @@ export default {
             sale,
             sellers,
         };
-    }
+    },
+    components: {
+        CurrencyInput,
+    },
 };
 </script>

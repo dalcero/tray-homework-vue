@@ -7,6 +7,12 @@
                 <h5 v-show="loading" class="text-center">Carregando...</h5>
 
                 <div v-show="!loading" class="card-body">
+                    <router-link
+                        :to="{ name: 'sales.create' }"
+                        class="btn btn-primary text-white float-end"
+                        >Lançar Venda</router-link
+                    >
+
                     <table class="table table-bordered mt-5">
                         <thead>
                             <tr>
