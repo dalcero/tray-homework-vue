@@ -3,7 +3,7 @@
 
 ### Configure a URL da API em /src/configs/api.js
 ```
-URL_API = http://localhost:8888
+URL_API = http://localhost
 ```
 
 ### Instalar NPM
