@@ -8,7 +8,6 @@ export default class SaleService {
 
     static async createSale(params)
     {
-        console.log(params);
         return axios.post('/api/sales', params)
     }
 
